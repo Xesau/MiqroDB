@@ -39,5 +39,11 @@ Insert a lot into the table:
 		['id' => 3, 'username' => 'daisy'],
 		['id' => 4, 'username' => 'james_bond']
 	]);
+Build queries like PDO's prepared statements:
+
+        $builder = new MiqroBuilder( $db, 'INSERT INTO $table ( $fields ) VALUES ( $values )' );
+        $builder->set( 'table', 'users' );
+        ...
+
 And a lot of other cool functions. Check it out for yourself.
 
