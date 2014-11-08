@@ -389,10 +389,12 @@ class MiqroTable
 	}
     
     /**
-	 * Insert a new row in the table
+	 * Insert a many rows into the table
 	 * 
 	 * @param param assoc: The field>value data. Structure:
-	 *   'field' => 'row'
+	 *   [ 'field' => 'row' ],
+     *   [ 'field' => 'row' ],
+     *   [ 'field' => 'row' ]
 	 */
 	public function insertMany( $entries, $options = [ 'existsKey' => null ] )
 	{
