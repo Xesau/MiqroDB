@@ -41,9 +41,11 @@ Insert a lot into the table:
 	]);
 Build queries like PDO's prepared statements:
 
-        $builder = new MiqroBuilder( $db, 'INSERT INTO $table ( $fields ) VALUES ( $values )' );
+        $builder = new MiqroBuilder($db, 'INSERT INTO $table ( $fields ) VALUES ( $values )');
         $builder->set( 'table', 'users' );
         ...
+        $builder->execute();
+Check your query history:
 
+        var_dump($db->getLastQueries());
 And a lot of other cool functions. Check it out for yourself.
-
